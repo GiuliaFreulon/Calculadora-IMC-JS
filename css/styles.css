@@ -1,0 +1,155 @@
+/* Configurações Iniciais */
+
+* { /* Seleciona todos os elementos */
+    /* Zerando margem e preenchimento */
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box; /* Inputs respeitarão a largura dos elementos pai */
+    font-family: Verdana; /* Fonte principal */
+}
+
+body { /* Corpo */
+    background-color: #787875; /* Cor de fundo */
+    display: flex; /* Configura a exibição dos elementos */
+
+    /* Centralizando elementos */
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh; /* Altura de tela do usuário definida */
+    color: #fff; /* Cor padrão dos textos */
+}
+
+.hide {
+    display: none !important; /* Esconde os elementos com da classe */
+}
+
+.container { /* Contêiner principal */
+    min-width: 400px; /* Largura mínima */
+    min-height: 400px; /* Altura mínima */
+    background-color: #222221; /* Cor de fundo */
+    padding: 2rem; /* Afasta o conteúdo das extremidades */
+    border-radius: 4px; /* Arrendodamento das bordas */
+}
+
+
+/* Formulário de IMC */
+
+#calc-container h2 { /* Título principal */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 2rem; /* Afasta o título do elemento abaixo */
+}
+
+.form-inputs { /* Formulários dos dados de entrada */
+    display: flex; /* Configura a exibição dos elementos */
+    flex-direction: column; /* Elementos exibidos um em baixo do outro */
+    justify-content: space-between; /* Espaça igualmente os elementos */
+}
+.form-control { /* Elementos dos dados de entrada */
+    display: flex; /* Configura a exibição dos elementos */
+    flex-direction: column; /* Elementos exibidos um em baixo do outro */
+    flex: 1; /* Elementos ocupam a largura máxima permitida */
+    margin-bottom: 1rem; /* Afasta os elementos um do outro */
+}
+.form-control label { /* Títulos dos dados de entrada */
+    font-weight: bold; /* Fonte em negrito */
+    color: #ccc; /* Cor do texto */
+    margin-bottom: .6rem; /* Afasta o título do elemento abaixo */
+}
+.form-control input { /* Dados de entrada */
+    border-radius: 4px; /* Arrendodamento das bordas */
+    padding: 1rem 0.5rem; /* Preenchimento de 1rem em cima e em baixo, e 0.5rem nas laterais */
+}
+
+.action-control { /* Botões da calculadora */
+    display: flex; /* Configura a exibição dos elementos */
+    justify-content: space-between; /* Espaça igualmente os elementos */
+    margin-top: 2rem; /* Afasta os elementos dos que estão no topo */
+    gap: 1rem; /* Distância entre os elementos */
+}
+button { /* Botões */
+    border-radius: 4px; /* Arrendodamento das bordas */
+    text-transform: uppercase; /* Texto maiúsculo */
+    padding: 1rem 1.5rem; /* Preenchimento de 1rem em cima e em baixo, e 1.5rem nas laterais */
+    background-color: #d7861b; /* Cor dos botões */
+    border: none; /* Remove as bordas dos botões */
+    color: #fff; /* Cor dos textos */
+    cursor: pointer; /* Cursor com aspecto clicável*/
+    opacity: 0.9; /* Diminui a opacidade do botão*/
+    flex: 1; /* Botões ocupam a largura máxima permitida */
+}
+button:hover { /* Botão ao passar o mouse em cima */
+    opacity: 1; /* Aumenta a opacidade do botão ao passar o mouse */
+}
+#clear-btn { /* Botão de Limpar */
+    background-color: #444; /* Cor do botão */
+}
+
+
+/* Tabela de IMC */
+
+#result-container { /* Contêiner dos resultados */
+    text-align: center; /* Texto alinhado ao centro */
+    display: flex; /* Configura a exibição dos elementos */
+    flex-direction: column; /* Elementos exibidos um em baixo do outro */
+}
+
+#imc-number { /* Resultado do IMC */
+    font-size: 2.4rem; /* Tamanho da fonte */
+    margin-bottom: .6rem; /* Afasta o título do elemento abaixo */
+}
+#imc-info { /* Situação do IMC */
+    font-size: 1.4rem; /* Tamanho da fonte */
+    color: #ccc; /* Cor do texto */
+}
+#result-container h3 { /* Título das classificações */
+    margin-top: 1rem; /* Afasta do elemento acima */
+    color: #dfdfdf; /* Cor do texto */
+}
+
+#imc-table { /* Tabela */
+    margin: 1.5rem 0; /* Afasta a tabela dos elementos a sua volta */
+    font-size: 0.8rem; /* Tamanho da fonte */
+}
+
+.table-header { /* Cabeçalho da tabela de IMC */
+    font-weight: bold; /* Fonte em negrito */
+    color: #ccc; /* Cor do texto */
+}
+
+.table-header,
+.table-data { /* Cabeçalho da tabela de IMC e Informações*/
+    display: flex; /* Configura a exibição dos elementos */
+    justify-content: space-between; /* Espaça igualmente os elementos */
+    margin-bottom: .5rem; /* Afasta do elemento abaixo */
+    padding-bottom: .5rem; /* Afasta os elementos entre si */
+    border-bottom: 1px solid #444; /* Cria uma borda abaixo dos elementos */
+}
+
+.table-header h4,
+.table-data p { /* Títulos do cabeçalho e Informações da tabela de IMC */
+    flex: 1; /* Elementos centralizados, ocupando todo espaço de largura permitida */
+}
+
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3) { /* Terceiro elemento(Obesidade) dos títulos de cabeçalho e informações da tabela de IMC */
+    max-width: 80px; /* Limita a largura do elemento */
+}
+
+#back-btn { /* Botão de voltar */
+    align-self: center; /* Limita o botão ao centro */
+}
+
+.good { /* Classe de IMC bom */
+    color: #12db34; /* Cor do texto */
+}
+.low { /* Classe de IMC baixo */
+    color: #dbce12; /* Cor do texto */
+}
+.medium { /* Classe de IMC médio */
+    color: #db6212; /* Cor do texto */
+}
+.high { /* Classe de IMC alto */
+    color: #db1912; /* Cor do texto */
+}

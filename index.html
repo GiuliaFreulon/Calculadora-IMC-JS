@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title> <!-- Título da página -->
+    <!-- Linkando js e css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body> <!-- Corpo -->
+
+    <div class="container"> <!-- Contêiner principal-->
+
+        <div id="calc-container"> <!-- Contêiner da área da calculadora -->
+            <h2>Calculadora de IMC</h2>
+            <form id="imc-form"> <!-- Formulário do IMC -->
+
+                <div class="form-inputs"> <!-- Formulário dos dados de entrada -->
+
+                    <div class="form-control">
+                        <label for="height">Altura(m):</label>
+                        <input type="text" name="height" id="height" placeholder="sua altura">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="weight">Peso(kg):</label>
+                        <input type="text" name="weight" id="weight" placeholder="seu peso">
+                    </div>
+
+                </div> <!-- Formulário dos dados de entrada (FIM) -->
+
+                <div class="action-control"> <!-- Botões da calculadora -->
+                    <button id="calc-btn">Calcular</button>
+                    <button id="clear-btn">Limpar</button>
+                </div> <!-- Botões da calculadora (FIM) -->
+
+            </form> <!-- Formulário do IMC (FIM) -->
+
+        </div> <!-- Contêiner da área da calculadora (FIM) -->
+
+        <div id="result-container" class="hide"> <!-- Contêiner dos resultados -->
+
+            <!-- Títulos -->
+            <p id="imc-number">Seu IMC: <span></span></p>
+            <p id="imc-info">Situação atual: <span></span></p>
+            <h3>Confira as classificações:</h3>
+            <!-- Títulos (FIM) -->
+
+            <div id="imc-table"> <!-- Tabela de IMC -->
+
+                <div class="table-header"> <!-- Cabeçalho da tabela de IMC -->
+                    <h4>IMC</h4>
+                    <h4>Classificação</h4>
+                    <h4>Obesidade</h4>
+                </div> <!-- Cabeçalho da tabela de IMC (FIM) -->
+
+            </div> <!-- Tabela de IMC (FIM) -->
+
+            <button id="back-btn">Voltar</button> <!-- Botão de voltar para a calculadora -->
+
+        </div> <!-- Contêiner dos resultados (FIM) -->
+
+    </div> <!-- Contêiner principal (FIM) -->
+
+</body> <!-- Corpo (FIM) -->
+
+</html>
